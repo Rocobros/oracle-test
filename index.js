@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
         if(err){
             return res.json({message: err})
         }
+        console.log(data)
         return res.json(data)
     })
 })
