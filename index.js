@@ -15,11 +15,10 @@ const db = mysql.createConnection({
 })
 
 app.get('/', (req, res) => {
-    db.query('select * from employee', (err, data) => {
+    db.query('select * from usuariosnormales', (err, data) => {
         if(err){
             return res.json({message: err})
         }
-        console.log(data)
         return res.json(data)
     })
 })
